@@ -22,8 +22,8 @@ const Index = () => {
             
             <div className="max-w-3xl mx-auto mb-12">
               <img 
-                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&h=600&fit=crop&auto=format" 
-                alt="Cute animated girl with beautiful long flowing hair" 
+                src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=800&h=600&fit=crop&auto=format" 
+                alt="Cute animated cartoon girl with beautiful long flowing hair" 
                 className="rounded-3xl shadow-2xl mx-auto float w-full h-80 object-cover"
               />
             </div>
