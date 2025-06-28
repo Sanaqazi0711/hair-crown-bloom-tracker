@@ -74,9 +74,9 @@ const DailyTracker = () => {
           {/* Cute animated girl with long hair illustration */}
           <div className="max-w-md mx-auto mb-8">
             <img 
-              src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=400&h=300&fit=crop&auto=format" 
+              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop&auto=format" 
               alt="Beautiful girl with long flowing hair" 
-              className="rounded-3xl shadow-2xl mx-auto float"
+              className="rounded-3xl shadow-2xl mx-auto float w-full h-64 object-cover"
             />
           </div>
         </div>
