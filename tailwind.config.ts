@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,32 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom pastel pink theme colors
+				'pastel-pink': {
+					50: '#fdf2f8',
+					100: '#fce7f3',
+					200: '#fbcfe8',
+					300: '#f9a8d4',
+					400: '#f472b6',
+					500: '#ec4899',
+					600: '#db2777',
+				},
+				'blush': {
+					50: '#fef7f0',
+					100: '#feecdc',
+					200: '#fcd9bd',
+					300: '#fdba8c',
+					400: '#ff8a4c',
+					500: '#ff5a1f',
+				},
+				'lavender': {
+					50: '#f5f3ff',
+					100: '#ede9fe',
+					200: '#ddd6fe',
+					300: '#c4b5fd',
+					400: '#a78bfa',
+					500: '#8b5cf6',
 				}
 			},
 			borderRadius: {
@@ -84,11 +111,56 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'bounce-gentle': {
+					'0%, 100%': {
+						transform: 'translateY(0)',
+						animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)'
+					},
+					'50%': {
+						transform: 'translateY(-5px)',
+						animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)'
+					}
+				},
+				'heart-beat': {
+					'0%': {
+						transform: 'scale(1)'
+					},
+					'14%': {
+						transform: 'scale(1.1)'
+					},
+					'28%': {
+						transform: 'scale(1)'
+					},
+					'42%': {
+						transform: 'scale(1.1)'
+					},
+					'70%': {
+						transform: 'scale(1)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.6s ease-out',
+				'bounce-gentle': 'bounce-gentle 2s infinite',
+				'heart-beat': 'heart-beat 1.5s ease-in-out infinite'
+			},
+			fontFamily: {
+				'dancing': ['Dancing Script', 'cursive'],
+				'poppins': ['Poppins', 'sans-serif'],
+				'nunito': ['Nunito', 'sans-serif'],
 			}
 		}
 	},
