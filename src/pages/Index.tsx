@@ -1,4 +1,3 @@
-
 import { Heart, Sparkles, Crown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -23,9 +22,9 @@ const Index = () => {
             
             <div className="max-w-3xl mx-auto mb-12">
               <img 
-                src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=800&h=600&fit=crop" 
-                alt="Beautiful hair care routine" 
-                className="rounded-3xl shadow-2xl mx-auto float"
+                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&h=600&fit=crop&auto=format" 
+                alt="Cute animated girl with beautiful long flowing hair" 
+                className="rounded-3xl shadow-2xl mx-auto float w-full h-80 object-cover"
               />
             </div>
             
