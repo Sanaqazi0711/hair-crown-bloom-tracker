@@ -113,7 +113,7 @@ const DailyTracker = () => {
         </Card>
 
         {/* Habits List */}
-        <Card className="mb-8">
+        <Card className="mb-8 bg-pink-50 border-pink-200">
           <CardHeader>
             <CardTitle className="text-2xl text-pastel-pink-700 text-center">
               Daily Hair Growth Habits
