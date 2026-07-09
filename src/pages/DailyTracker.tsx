@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { Check, Heart, Sparkles, Crown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
+import trackerHeroAsset from '@/assets/tracker-hero.png.asset.json';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Checkbox } from '@/components/ui/checkbox';
 
@@ -74,7 +75,7 @@ const DailyTracker = () => {
           {/* Cute animated girl with long hair illustration */}
           <div className="max-w-md mx-auto mb-8">
             <img 
-              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop&auto=format" 
+              src={trackerHeroAsset.url} 
               alt="Beautiful girl with long flowing hair" 
               className="rounded-3xl shadow-2xl mx-auto float w-full h-64 object-cover"
             />
