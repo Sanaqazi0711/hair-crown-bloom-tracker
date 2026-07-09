@@ -82,7 +82,7 @@ const DailyTracker = () => {
         </div>
 
         {/* Progress Section */}
-        <Card className="mb-8 glass border-pastel-pink-200">
+        <Card className="mb-8 bg-gradient-to-br from-white/90 to-pastel-pink-50/80 border-pastel-pink-200 shadow-lg backdrop-blur-sm">
           <CardContent className="p-6">
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center space-x-2">
