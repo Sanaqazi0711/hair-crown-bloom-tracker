@@ -103,38 +103,38 @@ const Index = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <Link to="/daily-tracker" className="group">
-              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105">
-                <div className="bg-pastel-pink-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+              <div className="bg-gradient-to-br from-white to-pastel-pink-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+                <div className="bg-gradient-to-br from-pastel-pink-100 to-pastel-pink-200 w-12 h-12 rounded-full flex items-center justify-center mb-4">
                   <Heart className="h-6 w-6 text-pastel-pink-600" />
                 </div>
                 <h3 className="font-semibold text-pastel-pink-700 mb-2">Daily Tracker</h3>
                 <p className="text-sm text-pastel-pink-600">Monitor your daily hair care habits</p>
               </div>
             </Link>
-            
+
             <Link to="/weekly-routine" className="group">
-              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105">
-                <div className="bg-lavender-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+              <div className="bg-gradient-to-br from-white to-lavender-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+                <div className="bg-gradient-to-br from-lavender-100 to-lavender-200 w-12 h-12 rounded-full flex items-center justify-center mb-4">
                   <Sparkles className="h-6 w-6 text-lavender-600" />
                 </div>
                 <h3 className="font-semibold text-pastel-pink-700 mb-2">Weekly Routine</h3>
                 <p className="text-sm text-pastel-pink-600">Detailed weekly care schedule</p>
               </div>
             </Link>
-            
+
             <Link to="/calendar" className="group">
-              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105">
-                <div className="bg-blush-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+              <div className="bg-gradient-to-br from-white to-blush-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+                <div className="bg-gradient-to-br from-blush-100 to-blush-200 w-12 h-12 rounded-full flex items-center justify-center mb-4">
                   <Crown className="h-6 w-6 text-blush-600" />
                 </div>
                 <h3 className="font-semibold text-pastel-pink-700 mb-2">Monthly Calendar</h3>
                 <p className="text-sm text-pastel-pink-600">Plan your hair care month</p>
               </div>
             </Link>
-            
+
             <Link to="/tips" className="group">
-              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105">
-                <div className="bg-pastel-pink-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+              <div className="bg-gradient-to-br from-white to-pastel-pink-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+                <div className="bg-gradient-to-br from-pastel-pink-100 to-pastel-pink-200 w-12 h-12 rounded-full flex items-center justify-center mb-4">
                   <Sparkles className="h-6 w-6 text-pastel-pink-600" />
                 </div>
                 <h3 className="font-semibold text-pastel-pink-700 mb-2">Pro Tips</h3>
