@@ -80,29 +80,6 @@
     @apply font-dancing;
   }
 
-  /* Global gradient touches */
-  .glass {
-    background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.2) 100%);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255,255,255,0.3);
-  }
-
-  [class*="rounded-2xl"],
-  [class*="rounded-3xl"] {
-    background-image: linear-gradient(145deg, rgba(255,255,255,0.9) 0%, rgba(253,242,248,0.6) 100%);
-  }
-
-  [class*="bg-white"] {
-    background-image: linear-gradient(160deg, #ffffff 0%, #fdf2f8 100%);
-  }
-
-  [class*="bg-pastel-pink-50"] {
-    background-image: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
-  }
-
-  [class*="bg-pastel-pink-100"] {
-    background-image: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%);
-  }
 }
 
 /* Custom scrollbar */
