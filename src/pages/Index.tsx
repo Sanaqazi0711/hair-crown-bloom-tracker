@@ -1,5 +1,6 @@
 import { Heart, Sparkles, Crown } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import heroAsset from '@/assets/hero-girl.png.asset.json';
 
 const Index = () => {
   return (
