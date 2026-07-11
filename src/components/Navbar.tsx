@@ -1,12 +1,15 @@
-
 import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { cn } from '@/lib/utils';
-import { Heart, Home, CheckSquare, Calendar, Lightbulb, Menu, X } from 'lucide-react';
+import { Heart, Home, CheckSquare, Calendar, Lightbulb, Menu, X, LogIn, LogOut } from 'lucide-react';
+import { useAuth } from '@/hooks/useAuth';
+import { toast } from 'sonner';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
+  const { user, signOut } = useAuth();
 
   const navItems = [
     { name: 'Home', href: '/', icon: Home },
@@ -17,6 +20,17 @@ const Navbar = () => {
   ];
 
   const isActive = (href: string) => location.pathname === href;
+
+  const handleAuthClick = async () => {
+    if (user) {
+      await signOut();
+      toast.success('Logged out 💕');
+      navigate('/');
+    } else {
+      navigate('/auth');
+    }
+    setIsOpen(false);
+  };
 
   return (
     <nav className="sticky top-0 z-50 glass border-b border-pastel-pink-200/20">
@@ -31,7 +45,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => {
               const Icon = item.icon;
               return (
@@ -50,6 +64,13 @@ const Navbar = () => {
                 </Link>
               );
             })}
+            <button
+              onClick={handleAuthClick}
+              className="flex items-center space-x-2 px-4 py-2 rounded-full text-sm font-medium bg-pastel-pink-500 text-white hover:bg-pastel-pink-600 transition-all"
+            >
+              {user ? <LogOut className="h-4 w-4" /> : <LogIn className="h-4 w-4" />}
+              <span>{user ? 'Log Out' : 'Log In'}</span>
+            </button>
           </div>
 
           {/* Mobile menu button */}
@@ -85,6 +106,13 @@ const Navbar = () => {
                 </Link>
               );
             })}
+            <button
+              onClick={handleAuthClick}
+              className="flex items-center space-x-3 px-4 py-3 text-sm font-medium text-pastel-pink-600 hover:bg-pastel-pink-50 w-full text-left"
+            >
+              {user ? <LogOut className="h-5 w-5" /> : <LogIn className="h-5 w-5" />}
+              <span>{user ? 'Log Out' : 'Log In'}</span>
+            </button>
           </div>
         )}
       </div>
