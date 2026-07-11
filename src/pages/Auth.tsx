@@ -61,7 +61,7 @@ const Auth = () => {
           </p>
         </div>
 
-        <Card className="bg-gradient-to-br from-white/90 to-pastel-pink-50/80 border-pastel-pink-200 shadow-lg backdrop-blur-sm">
+        <Card className="bg-gradient-to-br from-white to-pastel-pink-50 border-pastel-pink-200 shadow-lg">
           <CardHeader>
             <CardTitle className="text-center text-2xl text-pastel-pink-700 flex items-center justify-center gap-2">
               <Sparkles className="h-5 w-5" />
@@ -79,7 +79,7 @@ const Auth = () => {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="border-pastel-pink-200 focus-visible:ring-pastel-pink-400"
+                  className="bg-white border-pastel-pink-200 focus-visible:ring-pastel-pink-400"
                   placeholder="you@example.com"
                 />
               </div>
@@ -93,7 +93,7 @@ const Auth = () => {
                     minLength={6}
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="border-pastel-pink-200 focus-visible:ring-pastel-pink-400 pr-10"
+                    className="bg-white border-pastel-pink-200 focus-visible:ring-pastel-pink-400 pr-10"
                     placeholder="••••••••"
                   />
                   <button
