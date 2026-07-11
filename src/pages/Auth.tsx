@@ -1,6 +1,6 @@
 import { useState, FormEvent } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
-import { Heart, Crown, Sparkles } from 'lucide-react';
+import { Heart, Crown, Sparkles, Eye, EyeOff } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -14,6 +14,7 @@ const Auth = () => {
   const [mode, setMode] = useState<'login' | 'signup'>('login');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
   const [submitting, setSubmitting] = useState(false);
 
   if (!loading && user) return <Navigate to="/" replace />;
@@ -28,9 +29,15 @@ const Auth = () => {
         toast.success('Welcome back, beautiful! 💕');
         navigate('/');
       } else {
-        const { error } = await signUp(email, password);
+        const { error, needsConfirmation } = await signUp(email, password);
         if (error) throw error;
-        toast.success('Account created! Check your email to confirm. ✨');
+        if (needsConfirmation) {
+          toast.success('Account created! Check your email to confirm. ✨');
+          setMode('login');
+        } else {
+          toast.success('Welcome to your hair journey! 💕');
+          navigate('/daily-tracker');
+        }
       }
     } catch (err: any) {
       toast.error(err.message ?? 'Something went wrong');
@@ -78,16 +85,26 @@ const Auth = () => {
               </div>
               <div className="space-y-2">
                 <Label htmlFor="password" className="text-pastel-pink-700">Password</Label>
-                <Input
-                  id="password"
-                  type="password"
-                  required
-                  minLength={6}
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  className="border-pastel-pink-200 focus-visible:ring-pastel-pink-400"
-                  placeholder="••••••••"
-                />
+                <div className="relative">
+                  <Input
+                    id="password"
+                    type={showPassword ? 'text' : 'password'}
+                    required
+                    minLength={6}
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    className="border-pastel-pink-200 focus-visible:ring-pastel-pink-400 pr-10"
+                    placeholder="••••••••"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setShowPassword((prev) => !prev)}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-pastel-pink-400 hover:text-pastel-pink-600 focus:outline-none"
+                    aria-label={showPassword ? 'Hide password' : 'Show password'}
+                  >
+                    {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+                  </button>
+                </div>
               </div>
               <Button
                 type="submit"
