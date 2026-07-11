@@ -164,7 +164,7 @@ const DailyTracker = () => {
           <Button
             onClick={resetDay}
             variant="outline"
-            className="border-pastel-pink-300 text-pastel-pink-600 hover:bg-pastel-pink-50"
+            className="bg-white border-pastel-pink-300 text-pastel-pink-600 hover:bg-pastel-pink-50"
           >
             Reset Today's Progress
           </Button>
