@@ -31,7 +31,7 @@ const Toaster = ({ ...props }: ToasterProps) => {
           "--error-bg": "#ffffff",
           "--error-text": "#be185d",
           "--error-border": "#fbcfe8",
-ождо
+
         } as React.CSSProperties
       }
       {...props}
