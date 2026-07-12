@@ -1,10 +1,4 @@
-export interface DailyHabit {
-  id: string;
-  label: string;
-  icon: string;
-}
-
-export const dailyHabits: DailyHabit[] = [
+export const dailyHabits = [
   { id: 'fenugreek', label: 'Drink soaked fenugreek seed water', icon: '💧' },
   { id: 'nuts', label: 'Eat 5 almonds, 2 walnuts, 1 fig', icon: '🥜' },
   { id: 'sunlight', label: '15 mins sunlight exposure', icon: '☀️' },
@@ -16,10 +10,3 @@ export const dailyHabits: DailyHabit[] = [
   { id: 'balayam', label: 'Balayam (nail rubbing)', icon: '💅' },
   { id: 'sleep', label: '7-9 hrs sleep (silk pillowcase)', icon: '😴' },
 ];
-
-export const formatDateKey = (date: Date): string => {
-  const y = date.getFullYear();
-  const m = String(date.getMonth() + 1).padStart(2, '0');
-  const d = String(date.getDate()).padStart(2, '0');
-  return `${y}-${m}-${d}`;
-};
