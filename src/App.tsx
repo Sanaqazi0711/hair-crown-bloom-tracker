@@ -12,7 +12,6 @@ import Auth from "./pages/Auth";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import ProtectedRoute from "./components/ProtectedRoute";
-import { AuthProvider } from "./hooks/useAuth";
 
 const queryClient = new QueryClient();
 
@@ -22,34 +21,32 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <AuthProvider>
-          <div className="min-h-screen">
-            <Navbar />
-            <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/auth" element={<Auth />} />
-              <Route
-                path="/daily-tracker"
-                element={
-                  <ProtectedRoute>
-                    <DailyTracker />
-                  </ProtectedRoute>
-                }
-              />
-              <Route path="/weekly-routine" element={<WeeklyRoutine />} />
-              <Route
-                path="/calendar"
-                element={
-                  <ProtectedRoute>
-                    <Calendar />
-                  </ProtectedRoute>
-                }
-              />
-              <Route path="/tips" element={<Tips />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </div>
-        </AuthProvider>
+        <div className="min-h-screen">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/auth" element={<Auth />} />
+            <Route
+              path="/daily-tracker"
+              element={
+                <ProtectedRoute>
+                  <DailyTracker />
+                </ProtectedRoute>
+              }
+            />
+            <Route path="/weekly-routine" element={<WeeklyRoutine />} />
+            <Route
+              path="/calendar"
+              element={
+                <ProtectedRoute>
+                  <Calendar />
+                </ProtectedRoute>
+              }
+            />
+            <Route path="/tips" element={<Tips />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </div>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
