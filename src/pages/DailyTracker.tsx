@@ -136,7 +136,7 @@ const DailyTracker = () => {
         ) : (
           <>
             {/* Progress Section */}
-            <Card className="mb-8 bg-gradient-to-br from-[#fce7f3] to-[#f9a8d4]/40 border-pastel-pink-300 shadow-lg backdrop-blur-sm">
+            <Card className="mb-8 bg-gradient-to-br from-[#fce7f3] to-[#fbcfe8] border-2 border-[#f9a8d4] shadow-lg">
               <CardContent className="p-6">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center space-x-2">
@@ -216,9 +216,8 @@ const DailyTracker = () => {
             <div className="text-center">
               <Button
                 onClick={resetDay}
-                variant="outline"
                 disabled={saving}
-                className="border-pastel-pink-300 text-pastel-pink-600 hover:bg-pastel-pink-50"
+                className="bg-white border-2 border-[#f9a8d4] text-[#db2777] hover:bg-[#fce7f3] hover:text-[#db2777]"
               >
                 Reset Today's Progress
               </Button>
