@@ -68,7 +68,7 @@
 
   body {
     @apply bg-background text-foreground font-nunito;
-    background: linear-gradient(160deg, #fdf2f8 0%, #fce7f3 30%, #f5f3ff 60%, #fef7f0 100%);
+    background: linear-gradient(160deg, #fdf2f8 0%, #fce7f3 35%, #f5f3ff 70%, #fce7f3 100%);
     min-height: 100vh;
   }
 
@@ -109,7 +109,7 @@
 }
 
 .gradient-blush {
-  background: linear-gradient(135deg, #fef7f0 0%, #feecdc 100%);
+  background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
 }
 
 /* Custom animations */
