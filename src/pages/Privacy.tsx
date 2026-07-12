@@ -85,7 +85,7 @@ const Privacy = () => {
       <h2 className="text-xl font-semibold mt-6 mb-2">8. Contact</h2>
       <p>
         Questions about this policy or your data can be sent to:{" "}
-        <strong>your-email@example.com</strong>
+        <strong>sqazi954@gmail.com</strong>
       </p>
     </div>
   );
